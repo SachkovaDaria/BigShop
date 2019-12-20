@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Roboto bold"),
+    url("../fonts/Roboto/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto/Roboto-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Roboto Medium"),
+    url("../fonts/Roboto/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans"),
+    url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 600;
+  font-style: normal;
+  src: local("OpenSans Semibold"),
+    url("../fonts/OpenSans/OpenSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Montserrat Light"),
+    url("../fonts/Montserrat/Montserrat-Light.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: auto;
+  margin: 0;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 18px;
+  color: #777777;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    line-height: 20px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 1200px;
+  }
+}

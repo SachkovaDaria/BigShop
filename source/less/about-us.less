@@ -1,0 +1,39 @@
+.about-us__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.about-us__part {
+  @media (min-width: @tablet-width) {
+    margin-left: 130px;
+    flex: 1 0 40%;
+  }
+}
+
+.about-us__title {
+  text-align: left;
+}
+
+
+.about-us__des {
+  font-size: 25px;
+  line-height: 1.36;
+  letter-spacing: 0.25px;
+  color: #333333;
+}
+
+.about-us__des-part {
+  color: #8d83f9;
+}
+
+.about-us__text {
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.16px;
+  color: #888888;
+}
