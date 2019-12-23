@@ -1,8 +1,24 @@
 .newsletter {
   background-image: linear-gradient(to top, #8c84f9, #a165f4);
-  padding: 100px 0;
+  padding: 0 0 100px;
   position: relative;
-  margin-top: -60px;
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "get notified";
+      display: block;
+      position: absolute;
+      font-size: 150px;
+      font-weight: 900;
+      text-align: center;
+      color: rgba(254, 254, 254, 0.04);
+      text-transform: uppercase;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
 }
 
 .newsletter__title {
@@ -20,16 +36,26 @@
   height: 70px;
   border-radius: 50px;
   font-size: 20px;
-  padding: 10px;
+  padding: 27px;
   color: #333333;
-  display: block;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 200px 27px 27px;
+  }
 }
 
 .newsletter__form {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 120px;
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @desktop-width) {
+    width: 850px;
+  }
 }
 
 .newsletter__button {
@@ -37,19 +63,23 @@
   border: none;
   background: #fffefe;
   font-size: 20px;
-  padding: 15px 20px;
+  padding: 15px 50px;
   border-radius: 50px;
   margin-top: 30px;
-  cursor: pointer;
   display: inline-block;
-  z-index: 9;
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: -1px 4px 23px 1px #bde3ef;
+  }
 
   @media (min-width: @desktop-width) {
     color: #fffefe;
     background: linear-gradient(to top, #8c84f9, #a165f4);
     margin-top: 0;
     position: absolute;
-    top: 7px;
-    right: 10px;
+    top: 5.5px;
+    right: 5.5px;
+    padding: 18px 60px;
   }
 }

@@ -32,6 +32,14 @@
 }
 
 @font-face {
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("OpenSans bold"),
+    url("../fonts/OpenSans/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
   font-family: "Montserrat";
   font-weight: 300;
   font-style: normal;
@@ -76,10 +84,6 @@ img {
   text-align: center;
   color: #333333;
   margin: 0;
-
-  @media (min-width: @tablet-width) {
-    line-height: 20px;
-  }
 }
 
 .container {
@@ -87,10 +91,19 @@ img {
   padding: 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 70px;
+    padding: 0 70px;
   }
 
-  @media (min-width: @tablet-width) {
-    width: 1200px;
+  @media (min-width: @desktop-width) {
+    width: 1600px;
   }
+}
+
+.bgr {
+  background-color: #a165f4;
+  height: 200px;
+  width: 100%;
+  margin-top: -100px;
+  z-index: -1;
+  position: relative;
 }

@@ -9,34 +9,37 @@ document.addEventListener('DOMContentLoaded', function(e){
 
           // remove "act" class
           document.querySelector('#showcase__nav .showcase__nav-link--act')
-              .classList.remove('showcase__nav-link--act');
+            .classList.remove('showcase__nav-link--act');
           document.querySelector('#showcase__wrap .showcase__tab--act')
-              .classList.remove('showcase__tab--act');
+            .classList.remove('showcase__tab--act');
 
           // set "act"
           el.classList.add('showcase__nav-link--act'),
           tab.classList.add('showcase__tab--act');
-          console.log ('таб');
       })
   })
 
 });
 
-const bags = document.querySelectorAll('.bags__cart');
-const buttunBags = document.querySelectorAll ('.bags__button');
-const bagsActivity = document.querySelectorAll ('.bags__activity');
 
-for (let  i = 0; i <bags.length; i++) {
- bags [i].addEventListener('mouseover', () => {
-  bags [i].classList.toggle('bags__cart--active')
-  buttunBags [i].classList.toggle('bags__button--active')
-  bagsActivity [i].classList.toggle('bags__activity--active')
+const productCart = document.querySelectorAll('.product-cart');
+const buttunproductCart = document.querySelectorAll ('.product-cart__button');
+const productCartActivity = document.querySelectorAll ('.product-cart__activity');
+const productCartPrice = document.querySelectorAll ('.product-cart__price');
+
+for (let  i = 0; i <productCart.length; i++) {
+ productCart [i].addEventListener('mouseover', () => {
+  productCart [i].classList.toggle('product-cart--act')
+  buttunproductCart [i].classList.toggle('product-cart__button--act')
+  productCartActivity [i].classList.toggle('product-cart__activity--act')
+  productCartPrice [i].classList.toggle('product-cart__price--act')
 
  });
-  bags [i].addEventListener('mouseout', () => {
-  bags [i].classList.toggle('bags__cart--active')
-  buttunBags [i].classList.toggle('bags__button--active')
-  bagsActivity [i].classList.toggle('bags__activity--active')
+  productCart [i].addEventListener('mouseout', () => {
+  productCart [i].classList.toggle('product-cart--act')
+  buttunproductCart [i].classList.toggle('product-cart__button--act')
+  productCartActivity [i].classList.toggle('product-cart__activity--act')
+  productCartPrice [i].classList.toggle('product-cart__price--act')
 });
 };
 
